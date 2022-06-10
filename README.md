@@ -6,4 +6,3 @@ This repo is based on [`create-svelte`](https://github.com/sveltejs/kit/tree/mas
 - :white_check_mark: [cypress](https://docs.cypress.io/guides/overview/why-cypress) wired up and ready to go
 - :white_check_mark: *programmatic* routing adds navigation items automatically for every route generated from the folder structure
 - :white_check_mark: blazingly fast theme-switching implementation
-
