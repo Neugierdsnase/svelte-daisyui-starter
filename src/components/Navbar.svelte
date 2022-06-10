@@ -17,7 +17,7 @@
 	};
 </script>
 
-<nav class="navbar bg-base-100">
+<nav class="navbar bg-base-100" data-testid="navbar">
 	<div class="flex-1">
 		<a href="/" class="btn btn-ghost text-xl normal-case">daisyUI</a>
 	</div>
@@ -25,7 +25,7 @@
 		<ul class="menu menu-horizontal items-center p-0">
 			{#each menu as { href, label }, index}
 				<li in:fly={{ y: -22, duration: 200, delay: 200 * index }}>
-					<a {href}>{label}</a>
+					<a {href} data-testid={`nav-${label}`}>{label}</a>
 				</li>
 			{/each}
 			<li class="ml-4">

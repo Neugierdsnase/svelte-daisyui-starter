@@ -12,7 +12,7 @@
 		"lint": "prettier --check --plugin-search-dir=. . && eslint .",
 		"format": "prettier --write --plugin-search-dir=. .",
 		"cy:open": "yarn dev && cypress open",
-		"cy:run": "concurrently \"yarn dev\" \"cypress run\" --kill-others"
+		"cy:run": "concurrently \"yarn dev\" \"cypress run\" --kill-others --success=\"last\""
 	},
 	"lint-staged": {
 		"*.{html,svelte,ts,cjs,json}": "yarn format"
