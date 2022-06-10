@@ -11,8 +11,8 @@
 		"check:watch": "svelte-check --tsconfig ./tsconfig.json --watch",
 		"lint": "prettier --check --plugin-search-dir=. . && eslint .",
 		"format": "prettier --write --plugin-search-dir=. .",
-		"cy:open": "cypress open",
-		"cy:run": "cypress run"
+		"cy:open": "yarn dev && cypress open",
+		"cy:run": "concurrently \"yarn dev\" \"cypress run\" --kill-others"
 	},
 	"lint-staged": {
 		"*.{html,svelte,ts,cjs,json}": "yarn format"
@@ -20,9 +20,11 @@
 	"devDependencies": {
 		"@sveltejs/adapter-auto": "next",
 		"@sveltejs/kit": "next",
+		"@types/jest": "^28.1.1",
 		"@typescript-eslint/eslint-plugin": "^5.27.0",
 		"@typescript-eslint/parser": "^5.27.0",
 		"autoprefixer": "^10.4.7",
+		"concurrently": "^7.2.1",
 		"cypress": "^10.0.3",
 		"eslint": "^8.16.0",
 		"eslint-config-prettier": "^8.3.0",
