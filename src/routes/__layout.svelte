@@ -30,6 +30,6 @@
 </script>
 
 <Navbar {menu} />
-<main class="mx-auto w-2/3 text-center text-6xl font-bold text-red-800">
+<main class="mx-auto w-2/3 text-center text-6xl font-bold text-primary">
 	<slot />
 </main>

@@ -3,19 +3,41 @@
 	import { fly } from 'svelte/transition';
 
 	export let menu: NavItemType[];
+
+	const handleThemeToggle = () => {
+		const { documentElement } = window.document;
+		documentElement.setAttribute(
+			'data-theme',
+			`${
+				documentElement.getAttribute('data-theme') === 'dracula'
+					? 'winter'
+					: 'dracula'
+			}`
+		);
+	};
 </script>
 
-<div class="navbar bg-base-100">
+<nav class="navbar bg-base-100">
 	<div class="flex-1">
 		<a href="/" class="btn btn-ghost text-xl normal-case">daisyUI</a>
 	</div>
 	<div class="flex-none">
-		<ul class="menu menu-horizontal p-0">
+		<ul class="menu menu-horizontal items-center p-0">
 			{#each menu as { href, label }, index}
 				<li in:fly={{ y: -22, duration: 200, delay: 200 * index }}>
 					<a {href}>{label}</a>
 				</li>
 			{/each}
+			<li class="ml-4">
+				<input
+					type="checkbox"
+					class="toggle"
+					data-toggle-theme="dracula,winter"
+					data-act-class="ACTIVECLASS"
+					on:click={handleThemeToggle}
+					checked
+				/>
+			</li>
 		</ul>
 	</div>
-</div>
+</nav>
