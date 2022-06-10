@@ -1,38 +1,9 @@
-# create-svelte
+This repo is based on [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte) and includes the following **additional** setup:
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+- :white_check_mark: [tailwind](https://tailwindcss.com/)
+- :white_check_mark: [daisyui](https://daisyui.com/)
+- :white_check_mark: pre-commit hooks with [husky](https://typicode.github.io/husky/#/) and [lint-staged](https://github.com/okonet/lint-staged#readme)
+- :white_check_mark: [cypress](https://docs.cypress.io/guides/overview/why-cypress) wired up and ready to go
+- :white_check_mark: *programmatic* routing adds navigation items automatically for every route generated from the folder structure
+- :white_check_mark: blazingly fast theme-switching implementation
 
-## Creating a project
-
-If you're seeing this, you've probably already done this step. Congrats!
-
-```bash
-# create a new project in the current directory
-npm init svelte
-
-# create a new project in my-app
-npm init svelte my-app
-```
-
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
-
-## Building
-
-To create a production version of your app:
-
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
